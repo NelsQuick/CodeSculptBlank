@@ -68,3 +68,26 @@ header {
 .iconuser:hover, .iconbell:hover, .iconchat:hover {
     fill: #c04c4c;
 }
+
+
+
+
+.search-results {
+    position: absolute;
+    background-color: white;
+    width: 20rem;
+    max-height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    top: 6.9%; /* Ajustez cette propriété pour déplacer le menu sous l'input */
+}
+
+.search-results.show {
+    display: block;
+}
+
+.search-results div {
+    padding: 0.5rem;
+    cursor: pointer;
+}
