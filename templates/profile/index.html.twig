@@ -1,5 +1,3 @@
-{# templates/profile/index.html.twig #}
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Mon Profil{% endblock %}
@@ -10,9 +8,6 @@
     <p>Nom : {{ user.name }}</p>
     <p>Adresse e-mail : {{ user.email }}</p>
 
-    {# <h2>Modifier le Nom</h2>
-    {{ form_start(nameForm) }}
-    {{ form_widget(nameForm.name) }}
-    <button type="submit" class="btn btn-primary">Mettre à jour le nom</button>
-    {{ form_end(nameForm) }} #}
+    <a href="{{ path('app_profile_edit_name') }}" class="btn btn-primary">Modifier le Nom</a>
+    <a href="{{ path('app_profile') }}" class="btn btn-secondary">Retour au Profil</a>
 {% endblock %}
