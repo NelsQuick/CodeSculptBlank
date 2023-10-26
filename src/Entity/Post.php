@@ -3,8 +3,9 @@
 namespace App\Entity;
 
 use App\Repository\PostRepository;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\Types;
+use App\Entity\User;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -18,7 +19,11 @@ class Post
     private ?string $content = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date = null;
+    private ?\DateTimeInterface $date;
+
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: "posts")]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
 
     public function getId(): ?int
     {
@@ -42,10 +47,20 @@ class Post
         return $this->date;
     }
 
-    public function setDate(\DateTimeInterface $date): static
+    public function setUser(User $user): static
     {
-        $this->date = $date;
+        $this->user = $user;
 
         return $this;
+    }
+
+    public function getUser(): ?User
+    {
+    return $this->user;
+    }
+
+    public function __construct()
+    {
+        $this->date = new \DateTime('now', new \DateTimeZone('Europe/Paris'));
     }
 }
