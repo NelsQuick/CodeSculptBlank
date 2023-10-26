@@ -1,0 +1,70 @@
+/* ######################### BASE ######################### */
+
+/* COLORS */
+
+:root {
+    --headergrey: #edede9;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 60%;
+    margin: auto;
+}
+
+/* ######################### HEADER ######################### */
+
+header {
+    height: 4rem;
+    background-color: var(--headergrey);
+}
+
+.blockheader {
+    margin: 0 0.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.CodeSculptLogoHeader {
+    width: 3rem;
+}
+
+.search {
+    background-color: white;
+    height: 2rem;
+    width: 20rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+}
+
+.search input {
+    border: none;
+    height: 2rem;
+    width: 18rem;
+    border-radius: 10px;
+    outline: none;
+}
+
+.iconsearch {
+    fill: #414141;
+}
+
+.iconuser, .iconbell, .iconchat {
+    fill: #414141;
+    margin-left: 0.5rem;
+    transition: fill 0.3s;
+}
+
+.iconuser:hover, .iconbell:hover, .iconchat:hover {
+    fill: #c04c4c;
+}
