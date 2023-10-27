@@ -3,13 +3,31 @@
 {% block title %}Accueil / CodeSculpt{% endblock %}
 
 {% block body %}
-    <h1>Accueil</h1>
+<div class="home-container">
+    <div class="section-left">
+        <div class="poste-form" style="position: relative; /* Position relative pour contenir le bouton */">
+            <p class="username-post">@{{ app.user.username }}</p>
+            {{ form_start(form) }}
+            {{ form_widget(form.content, {'attr': {'class': 'content-input'}}) }}
+            <div class="button-container">
+                <button class="submit-post" type="submit">Poster</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
 
-    <h2>Liste des Publications :</h2>
-    <ul>
-        {% for post in posts %}
-            <li>{{ post.content }}</li>
-            <p>Publié le {{ post.date|date('d/m/Y H:i') }} par {{ post.user.username }}</p> {# Récupérez le nom d'utilisateur de l'auteur du post #}
-        {% endfor %}
-    </ul>
+    {% for post in posts %}
+        <div class="recent-posts">
+            <p class="username-post">@{{ post.user.username }} · {{ post.date|date('d/m/Y H:i') }} </p>
+            {{ post.content }}
+        </div>
+    {% endfor %}
+
+
+
+    </div>
+
+
+    <div class="section-right">
+    </div>
+</div>
 {% endblock %}

@@ -3,10 +3,10 @@
 namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType; // Importez TextareaType
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use App\Entity\Post; // Assurez-vous d'importer la classe Post si elle n'est pas déjà importée
+use App\Entity\Post;
 
 class PostType extends AbstractType
 {
@@ -14,7 +14,11 @@ class PostType extends AbstractType
     {
         $builder
             ->add('content', TextareaType::class, [
-                'label' => 'Contenu de la publication'
+                'label' => false,
+                'attr' => [
+                    'class' => 'content-input',
+                    'placeholder' => 'Quoi de neuf ?',
+                ]
             ]);
     }
 

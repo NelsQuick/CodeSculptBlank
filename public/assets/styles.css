@@ -3,37 +3,44 @@
 /* COLORS */
 
 :root {
-    --headergrey: #edede9;
+    --headergrey: #ECECEC;
 }
 
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins';
 }
 
 body {
-    width: 60%;
+    width: 50%;
     margin: auto;
 }
 
 /* ######################### HEADER ######################### */
 
 header {
-    height: 4rem;
+    height: 3rem;
     background-color: var(--headergrey);
 }
 
 .blockheader {
-    margin: 0 0.5%;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
 }
 
+.headericons {
+    margin-top: 0.4rem;
+}
+
 .CodeSculptLogoHeader {
-    width: 3rem;
+    width: 2rem;
+    display: block;
 }
 
 .search {
@@ -61,16 +68,13 @@ header {
 
 .iconuser, .iconbell, .iconchat {
     fill: #414141;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     transition: fill 0.3s;
 }
 
 .iconuser:hover, .iconbell:hover, .iconchat:hover {
     fill: #c04c4c;
 }
-
-
-
 
 .search-results {
     position: absolute;
@@ -80,7 +84,8 @@ header {
     border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     display: none;
-    top: 6.9%; /* Ajustez cette propriété pour déplacer le menu sous l'input */
+    top: 6%;
+    z-index: 1;
 }
 
 .search-results.show {
@@ -90,4 +95,67 @@ header {
 .search-results div {
     padding: 0.5rem;
     cursor: pointer;
+}
+
+/* ######################### HOME ######################### */
+
+.home-container {
+    display: flex;
+    height: 100%;
+}
+
+.section-left {
+    background-color: #BBBBBB;
+    width: 70%;
+}
+
+.section-right {
+    background-color: #929191;
+    width: 30%;
+}
+
+.poste-form {
+    width: 90%;
+    min-height: 6rem;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+
+}
+
+.content-input {
+    width: 100%;
+    height: 3rem;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+}
+
+.submit-post {
+    background-color: #646464;
+    color: white;
+    padding: 0.2rem 0.7rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.recent-posts {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.username-post {
+    font-weight: bold;
 }
