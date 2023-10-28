@@ -6,6 +6,11 @@
     --headergrey: #ECECEC;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 * {
     margin: 0;
@@ -145,6 +150,11 @@ header {
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-post:hover {
+    background-color: #BBBBBB;
 }
 
 .recent-posts {
@@ -158,4 +168,60 @@ header {
 
 .username-post {
     font-weight: bold;
+}
+
+
+
+
+.user-access{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-profil, .right-logout {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: 10rem;
+    border-radius: 30px;
+    padding: 0.5rem;
+    transition: background-color 0.3s;
+
+}
+
+.right-profil:hover,
+ .right-logout:hover {
+    background-color: #646464;
+}
+
+.right-profil a,
+.right-logout a {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    color: white;
+}
+
+.right-icons-basics {
+    fill: white;
+}
+
+/* ######################### PROFIL ######################### */
+
+
+.profil-button {
+    background-color: #c04c4c;
+    padding: 0.3rem;
+    border-radius: 30px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.profil-button:hover {
+    background-color: #913939;
+}
+
+.profil-button-container{
+    margin-top: 0.5rem;
 }
