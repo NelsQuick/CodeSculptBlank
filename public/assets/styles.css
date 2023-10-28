@@ -178,7 +178,7 @@ header {
     flex-direction: column;
 }
 
-.right-profil, .right-logout {
+.right-profil, .right-logout, .right-admin {
     display: flex;
     align-items: center;
     margin-left: 2rem;
@@ -191,12 +191,14 @@ header {
 }
 
 .right-profil:hover,
- .right-logout:hover {
+ .right-logout:hover,
+ .right-admin:hover {
     background-color: #646464;
 }
 
 .right-profil a,
-.right-logout a {
+.right-logout a,
+.right-admin a {
     display: flex;
     align-items: center;
     margin-right: 1rem;
