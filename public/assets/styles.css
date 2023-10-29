@@ -23,6 +23,13 @@ body {
     margin: auto;
 }
 
+@media (max-width: 767px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+}
+
 /* ######################### HEADER ######################### */
 
 header {
@@ -46,6 +53,7 @@ header {
 .CodeSculptLogoHeader {
     width: 2rem;
     display: block;
+    margin-right: 1rem;
 }
 
 .search {
@@ -102,6 +110,12 @@ header {
     cursor: pointer;
 }
 
+@media (max-width: 767px) {
+    .search {
+        width: 50%;
+    }
+}
+
 /* ######################### HOME ######################### */
 
 .home-container {
@@ -127,7 +141,6 @@ header {
     background-color: white;
     border-radius: 10px;
     padding: 1rem;
-
 }
 
 .content-input {
@@ -170,9 +183,6 @@ header {
     font-weight: bold;
 }
 
-
-
-
 .user-access{
     display: flex;
     flex-direction: column;
@@ -209,6 +219,42 @@ header {
     fill: white;
 }
 
+.admin-portable {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .section-right {
+        display: none;
+    }
+
+    .section-left {
+        width: 100%;
+    }
+
+    .poste-form {
+        width: 80%;
+        margin-top: 1rem;
+    }
+
+    .recent-posts {
+        width: 80%;
+    }
+
+    .admin-portable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem !important;
+    }
+
+    .admin-portable a {
+        color: white;
+        margin-right: 0.5rem;
+    }
+}
+
+
 /* ######################### PROFIL ######################### */
 
 
@@ -224,6 +270,22 @@ header {
     background-color: #913939;
 }
 
-.profil-button-container{
+.profil-button-container {
     margin-top: 0.5rem;
 }
+
+.profil {
+    background-color: var(--headergrey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10rem;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5rem;
+    border-radius: 30px;
+    padding-bottom: 1rem;
+}
+
