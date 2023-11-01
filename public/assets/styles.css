@@ -116,10 +116,12 @@ header {
 @media (max-width: 1024px) {
     .search {
         width: 10rem;
+        border-radius: 30px;
     }
 
     .search input {
         width: 8rem;
+        border-radius: 30px;
     }
 
     header {
@@ -247,10 +249,12 @@ header {
     .poste-form {
         width: 80%;
         margin-top: 1rem;
+        border-radius: 30px;
     }
 
     .recent-posts {
         width: 80%;
+        border-radius: 30px;
     }
 
     .admin-portable {
@@ -268,6 +272,8 @@ header {
     .submit-post {
         font-size: 40px;
     }
+
+
 }
 
 /* ######################### PROFIL ######################### */
