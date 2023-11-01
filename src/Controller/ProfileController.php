@@ -43,18 +43,24 @@ class ProfileController extends AbstractController
     #[Route('/profile/edit-name', name: 'app_profile_edit_name')]
     public function editName(Request $request, Security $security): Response
     {
+        // Obtenez l'utilisateur connecté
         $user = $security->getUser();
+    
+        // Créez un formulaire de type UpdateNameFormType lié à l'objet utilisateur
         $form = $this->createForm(UpdateNameFormType::class, $user);
     
+        // Gérez la soumission du formulaire
         $form->handleRequest($request);
     
+        // Vérifiez si le formulaire a été soumis et s'il est valide
         if ($form->isSubmitted() && $form->isValid()) {
-            // Mettez à jour le nom de l'utilisateur ici
-            $this->entityManager->flush(); // Utilisation de l'entityManager injecté
     
-            $this->addFlash('success', 'Le nom a été mis à jour avec succès.');
+            // Utilisation de l'EntityManager injecté pour enregistrer les changements en base de données
+            $this->entityManager->flush();
+    
         }
     
+        // Renvoyez la vue de la page d'édition du nom avec l'utilisateur et le formulaire
         return $this->render('profile/edit_name.html.twig', [
             'user' => $user,
             'form' => $form->createView(),

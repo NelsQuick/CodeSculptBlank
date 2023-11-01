@@ -19,14 +19,17 @@ a {
 }
 
 body {
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     body {
         width: 100%;
-        margin: 0;
+        }
+
+    * {
+        font-size: 42px;
     }
 }
 
@@ -110,9 +113,18 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .search {
-        width: 50%;
+        width: 10rem;
+    }
+
+    .search input {
+        width: 8rem;
+    }
+
+    header {
+        height: 5rem;
+        background-color: var(--headergrey);
     }
 }
 
@@ -223,7 +235,7 @@ header {
     display: none;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 1024px) {
     .section-right {
         display: none;
     }
@@ -252,11 +264,13 @@ header {
         color: white;
         margin-right: 0.5rem;
     }
+
+    .submit-post {
+        font-size: 40px;
+    }
 }
 
-
 /* ######################### PROFIL ######################### */
-
 
 .profil-button {
     background-color: #c04c4c;
@@ -288,4 +302,3 @@ header {
     border-radius: 30px;
     padding-bottom: 1rem;
 }
-

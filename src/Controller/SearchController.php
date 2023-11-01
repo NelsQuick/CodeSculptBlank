@@ -32,7 +32,7 @@ class SearchController extends AbstractController
 
         $users = $queryBuilder->getQuery()->getResult();
 
-        // Vous pouvez maintenant retourner les résultats dans une réponse JSON
+        // Retourner les résultats dans une réponse JSON
         $usernames = [];
         foreach ($users as $user) {
             $usernames[] = $user->getUsername();
